@@ -1,241 +1,216 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Influencer - Seguidores Para Instagram</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Influencer - Seguidores Para Instagram</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      body {
-        font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #ff0066, #ff8000);
-        color: white;
-        text-align: center;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #ff0066, #ff8000);
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      .logo img {
-        width: 35vw;
-        max-width: 130px;
-        margin: 1px auto;
-      }
+    .logo img {
+      width: 35vw;
+      max-width: 130px;
+      margin: 1px auto;
+    }
 
-      h1 {
-        font-weight: 700;
-        font-size: clamp(1.6rem, 5vw, 2rem);
-        margin-top: 5px;
-      }
+    h1 {
+      font-weight: 700;
+      font-size: clamp(1.6rem, 5vw, 2rem);
+      margin-top: 5px;
+    }
 
-      .tagline {
-        font-size: clamp(1rem, 3.5vw, 1.2rem);
-        margin-bottom: 25px;
-        color: #ffe6e6;
-      }
+    .tagline {
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
+      margin-bottom: 25px;
+      color: #ffe6e6;
+    }
 
-      .precios-title {
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: #fff;
-        margin-top: 20px;
-      }
+    .precios-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 20px;
+    }
 
-      .table {
-        background-color: transparent !important;
-      }
+    .promo-text {
+      font-size: 1.1rem;
+      color: #ffe6e6;
+      background: linear-gradient(90deg, #ff0066, #ff6600);
+      padding: 10px 20px;
+      border-radius: 12px;
+      display: inline-block;
+      font-weight: 600;
+      box-shadow: 0 0 12px rgba(255, 102, 0, 0.8);
+      text-shadow: 1px 1px 2px #000;
+      animation: pulse 1.5s infinite;
+      margin-top: 10px;
+    }
 
-      .table td,
-      .table th {
-        background-color: transparent !important;
-        color: #fff;
-      }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
 
-      .table thead th {
-        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-      }
+    .table {
+      background-color: transparent !important;
+    }
 
-      .table tbody tr {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
+    .table td,
+    .table th {
+      background-color: transparent !important;
+      color: #fff;
+    }
 
-      .table tbody tr:hover {
-        background-color: rgba(255, 255, 255, 0.05);
-      }
+    .table thead th {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
 
-      .table-responsive {
-        max-width: 500px;
-        margin: 0 auto;
-      }
+    .table tbody tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-      .platforms {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
+    .table tbody tr:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .table-responsive {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .platforms {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .platforms span {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 30px;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .platforms span:hover {
+      background-color: white;
+      color: #ff0066;
+      cursor: pointer;
+    }
+
+    .whatsapp-btn {
+      margin-top: 30px;
+      background: #25d366;
+      border: none;
+      border-radius: 50px;
+      padding: 16px 28px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s, background-color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.05);
+      background-color: #1d5735;
+    }
+
+    @media (max-width: 360px) {
+      .whatsapp-btn {
+        padding: 12px 22px;
+        font-size: 0.9rem;
       }
 
       .platforms span {
-        display: inline-block;
-        padding: 10px 18px;
-        border-radius: 30px;
-        background-color: rgba(255, 255, 255, 0.15);
-        color: #fff;
-        font-weight: 600;
+        font-size: 0.85rem;
+        padding: 8px 14px;
+      }
+
+      .tagline {
         font-size: 0.95rem;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.2);
       }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="/logosinfondo.png" alt="Logo Influencer" />
+  </div>
 
-      .platforms span:hover {
-        background-color: white;
-        color: #ff0066;
-        cursor: pointer;
-      }
+  <!-- Título + Texto promocional con animación -->
+  <h2 class="precios-title">
+    PRECIOS INSTAGRAM<br />
+    <small class="promo-text">
+      🎁 Si no hablás al WhatsApp te llevás <strong>500 likes de regalo</strong><br />
+      <span style="font-size: 0.95rem;">en cualquier compra de seguidores</span>
+    </small>
+  </h2>
 
-      .whatsapp-btn {
-        margin-top: 30px;
-        background: #25d366;
-        border: none;
-        border-radius: 50px;
-        padding: 16px 28px;
-        font-size: 1rem;
-        font-weight: 700;
-        color: white;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-        transition: transform 0.2s, background-color 0.2s;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-      }
+  <div class="table-responsive mt-3">
+    <table class="table table-borderless text-center align-middle">
+      <thead>
+        <tr>
+          <th style="color: white">Cantidad</th>
+          <th style="color: white">Seguidores</th>
+          <th style="color: white">Precio</th>
+          <th>
+            <img src="https://flagcdn.com/w40/ar.png" width="24" alt="Argentina" />
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>100</td><td><strong>Seguidores</strong></td><td>$1000</td><td></td></tr>
+        <tr><td>350</td><td><strong>Seguidores</strong></td><td>$1300</td><td></td></tr>
+        <tr><td>500</td><td><strong>Seguidores</strong></td><td>$1700</td><td></td></tr>
+        <tr><td>1000</td><td><strong>Seguidores</strong></td><td>$3000</td><td></td></tr>
+        <tr><td>1500</td><td><strong>Seguidores</strong></td><td>$4500</td><td></td></tr>
+        <tr><td>3000</td><td><strong>Seguidores</strong></td><td>$8000</td><td></td></tr>
+        <tr><td>5000</td><td><strong>Seguidores</strong></td><td>$14000</td><td></td></tr>
+      </tbody>
+    </table>
+    <p style="color: #ffd9b3; font-size: 0.9rem">Más de 4000 ventas exitosas</p>
+  </div>
 
-      .whatsapp-btn:hover {
-        transform: scale(1.05);
-        background-color: #1d5735;
-      }
-
-      @media (max-width: 360px) {
-        .whatsapp-btn {
-          padding: 12px 22px;
-          font-size: 0.9rem;
-        }
-
-        .platforms span {
-          font-size: 0.85rem;
-          padding: 8px 14px;
-        }
-
-        .tagline {
-          font-size: 0.95rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="logo">
-      <img src="/logosinfondo.png" alt="Logo Influencer" />
-    </div>
-
-    <!-- Tabla de precios -->
-    <h2 class="precios-title">
-      PRECIOS INSTAGRAM<br /><small style="font-size: 1rem; color: #ffe6e6"
-        >Si no habalas al WhatsApp te llevas 500 likes de regalo en cualquier compra de seguidores</small
-      >
-    </h2>
-
-    <div class="table-responsive mt-3">
-      <table class="table table-borderless text-center align-middle">
-        <thead>
-          <tr>
-            <th style="color: white">Cantidad</th>
-            <th style="color: white">Seguidores</th>
-            <th style="color: white">Precio</th>
-            <th>
-              <img
-                src="https://flagcdn.com/w40/ar.png"
-                width="24"
-                alt="Argentina"
-              />
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>100</td>
-            <td><strong>Seguidores</strong></td>
-            <td>$1000</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>350</td>
-            <td><strong>Seguidores</strong></td>
-            <td>$1300</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>500</td>
-            <td><strong>Seguidores</strong></td>
-            <td>$1700</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>1000</td>
-            <td><strong>Seguidores</strong></td>
-            <td>$3000</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>1500</td>
-            <td><strong>Seguidores</strong></td>
-            <td>$4500</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>3000</td>
-            <td><strong>Seguidores</strong></td>
-            <td>$8000</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>5000</td>
-            <td><strong>Seguidores</strong></td>
-            <td>$14000</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <p style="color: #ffd9b3; font-size: 0.9rem">
-        Más de 4000 ventas exitosas
-      </p>
-    </div>
-
-    <!-- Plataformas -->
-    <div class="platforms">
-      <span>Instagram</span>
-      <span>TikTok</span>
-    </div>
-
-    <!-- Botón de WhatsApp con mensaje -->
-    <a
-      href="https://wa.me/5492212024243?text=Hola,%20quiero%20comprar%20seguidores%20para%20Instagram"
-      class="btn whatsapp-btn mt-4"
-    >
-      <img src="https://img.icons8.com/ios-filled/20/ffffff/whatsapp.png" />
-      COMPRAR SEGUIDORES AHORA
-    </a>
-  </body>
+  <!-- Botón de WhatsApp -->
+  <a
+    href="https://wa.me/5492212024243?text=Hola,%20quiero%20comprar%20seguidores%20para%20Instagram"
+    class="btn whatsapp-btn mt-4"
+  >
+    <img src="https://img.icons8.com/ios-filled/20/ffffff/whatsapp.png" />
+    COMPRAR SEGUIDORES AHORA
+  </a>
+</body>
 </html>
