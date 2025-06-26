@@ -13,6 +13,7 @@
       color: white;
       text-align: center;
       min-height: 100vh;
+      padding: 5vw;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -21,7 +22,7 @@
     .logo img {
       width: 35vw;
       max-width: 130px;
-      margin: 1px auto ;
+      margin: 1px auto;
     }
 
     h1 {
@@ -36,20 +37,37 @@
       color: #ffe6e6;
     }
 
-    .info-box {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 15px;
-      margin: 10px 0;
-      width: 100%;
-      max-width: 400px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    .precios-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 20px;
     }
 
-    .info-box strong {
-      font-size: clamp(1.3rem, 4vw, 1.7rem);
-      display: block;
-      margin-bottom: 5px;
+    .table {
+      background-color: transparent !important;
+    }
+
+    .table td, .table th {
+      background-color: transparent !important;
+      color: #fff;
+    }
+
+    .table thead th {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .table tbody tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .table tbody tr:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .table-responsive {
+      max-width: 500px;
+      margin: 0 auto;
     }
 
     .platforms {
@@ -96,7 +114,7 @@
 
     .whatsapp-btn:hover {
       transform: scale(1.05);
-      background-color: #1d5735; /* Verde más oscuro */
+      background-color: #1d5735;
     }
 
     @media (max-width: 360px) {
@@ -122,28 +140,40 @@
     <img src="/logosinfondo.png" alt="Logo Influencer">
   </div>
 
-  <h1>SEGUIDORES PREMIUM</h1>
-  <p class="tagline">Impulsa tu presencia en redes sociales con Seguidores y Likes</p>
+  <!-- Tabla de precios -->
+  <h2 class="precios-title">PRECIOS SEGUIDORES<br><small style="font-size: 1rem; color: #ffe6e6;">Instagram</small></h2>
 
-  <div class="info-box">
-    <strong>100K+</strong>
-    Clientes Satisfechos
-  </div>
-  <div class="info-box">
-    <strong>24/7</strong>
-    Soporte Activo
-  </div>
-  <div class="info-box">
-    <strong>100%</strong>
-    Seguro y confiable
+  <div class="table-responsive mt-3">
+    <table class="table table-borderless text-center align-middle">
+      <thead>
+        <tr>
+          <th style="color: white;">Cantidad</th>
+          <th style="color: white;">Seguidores</th>
+          <th style="color: white;">Precio</th>
+          <th><img src="https://flagcdn.com/w40/ar.png" width="24" alt="Argentina"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>100</td><td><strong>Seguidores</strong></td><td>$1000</td><td></td></tr>
+        <tr><td>350</td><td><strong>Seguidores</strong></td><td>$1300</td><td></td></tr>
+        <tr><td>500</td><td><strong>Seguidores</strong></td><td>$1700</td><td></td></tr>
+        <tr><td>1000</td><td><strong>Seguidores</strong></td><td>$3000</td><td></td></tr>
+        <tr><td>1500</td><td><strong>Seguidores</strong></td><td>$4500</td><td></td></tr>
+        <tr><td>3000</td><td><strong>Seguidores</strong></td><td>$8000</td><td></td></tr>
+        <tr><td>5000</td><td><strong>Seguidores</strong></td><td>$14000</td><td></td></tr>
+      </tbody>
+    </table>
+    <p style="color: #ffd9b3; font-size: 0.9rem;">Más de 4000 ventas exitosas</p>
   </div>
 
+  <!-- Plataformas -->
   <div class="platforms">
     <span>Instagram</span>
     <span>TikTok</span>
   </div>
 
-  <a href="https://wa.me/5492212024243" class="btn whatsapp-btn mt-4">
+  <!-- Botón de WhatsApp con mensaje -->
+  <a href="https://wa.me/5492212024243?text=Hola,%20quiero%20comprar%20seguidores%20para%20Instagram" class="btn whatsapp-btn mt-4">
     <img src="https://img.icons8.com/ios-filled/20/ffffff/whatsapp.png" />
     COMPRAR SEGUIDORES AHORA
   </a>
